@@ -149,6 +149,20 @@ function del() {
     mkdir -p /tmp/.trash && mv "$@" /tmp/.trash;
 }
 
+function rm-except() {
+    about 'Remove all files/directories except for one file'
+    group 'base'
+    param 'file or folder to be deleted'
+    example 'rm-except $filename'
+    example 'rm-except $foldername'
+
+    local keep_file=$1
+
+    find . ! -name "$keep_file" -type f -exec rm -f {} +
+}
+
+
+
 function gedit() {
     about 'Opens non-blocking program from terminal'
     group 'base'

@@ -27,7 +27,15 @@ function mkcd() {
 
 
 # ls commands
-alias ls='ls -ah --color=always' # ls always has --color switched on & shows all files
+
+# switch to use exa instead of ls if available on system
+if command -v exa >/dev/null; then
+    alias ls='${HOME}/stablecaps_bashrc/internal/internal_exa_wrapper.sh'
+else
+    alias ls='/bin/ls -ah --color=always'
+fi
+
+#alias ls='ls -ah --color=always' # ls always has --color switched on & shows all files
 alias qs='/bin/ls' # fast ls with no options (many files in a directory)
 alias la='ls -Alh' # show hidden files
 alias lao='ls -ld .?*' # show ONLY hidden files
@@ -43,6 +51,35 @@ alias ll='ls -lth' # long listing format
 alias labc='ls -lap' #alphabetical sort
 alias lf="ls -l | egrep -v '^d'" # files only
 alias ldir="ls -l | egrep '^d'" # directories only
+
+# exa - uncomment if it is installed on the system
+# https://github.com/sharkdp/vivid # to generate LS_COLORS
+# https://github.com/trapd00r/LS_COLORS
+#ayu
+alias ex='exa -a --group --color=automatic --classify'
+alias exl='exa -al --group --links --grid --color=automatic --classify'
+
+
+# function exlt() {
+# 	about 'Exa long with tree view with option to limit the number of levels'
+# 	group 'aliases'
+# 	param 'number of levels'
+# 	example '$ exlt'
+# 	example '$ exlt 2'
+
+# 	local num_levels=$1
+# 	if [ num_levels == "" ]; then
+# 		exa -al --group --links --grid --tree --color=automatic --classify --level
+# 	else
+# 		exa -al --group --links --grid --tree --color=automatic --classify --level $num_levels
+# 	fi
+# }
+
+# exa --ignore-glob="*case*"
+# exa --ignore-glob="Open*|rot??.sh|*case*"
+# exa --sort=ext
+
+
 
 # cd commands
 alias cd..='cd ..'
@@ -84,3 +121,19 @@ alias F5='source ~/.bashrc'
 ## df -
 alias df='df -x "squashfs"' # Stop showing mounted snap in file system
 alias dfraw='df' # raw df with all options disabled
+
+
+### bat
+alias bat='bat --paging=never --theme "Monokai Extended --plain"'
+alias batx='bat --paging=always --theme "Monokai Extended"'
+alias bata='bat --show-all'
+
+alias bathelp='bat --plain --language=help'
+help() {
+	about 'Uses bat to colorize help text messages'
+	group 'aliases'
+	param 'Name of program whose help text we wish to pipe to bat'
+	example '$ help mv'
+	example '$ help git commit'
+    "$@" --help 2>&1 | bathelp
+}

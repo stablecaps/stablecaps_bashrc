@@ -107,7 +107,7 @@ function git_remove_missing_files() {
   about "git rm's missing files"
   group 'git'
 
-  git ls-files -d -z | xargs -0 git update-index --remove
+  git ls-files -d -z "$(git rev-parse --show-toplevel)" | xargs -0 git update-index --remove
 }
 
 # Adds files to git's exclude file (same as .gitignore)

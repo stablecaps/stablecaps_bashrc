@@ -7,7 +7,7 @@ function check_new_bashrc_vers() {
     example 'check_new_bashrc_vers'
 
     git --git-dir=${HOME}/stablecaps_bashrc/.git fetch --quiet
-    # check relation of our local .bashrc to remote basshrc at https://github.com/meatware/stablecaps_bashrc
+    # check relation of our local .bashrc to remote basshrc at https://github.com/stablecaps/stablecaps_bashrc
     BASHRC_CURR_BRANCH=$(git --git-dir=${HOME}/stablecaps_bashrc/.git rev-parse --abbrev-ref HEAD)
     BASHRC_COMMIT_DETAILS=$(git --git-dir=${HOME}/stablecaps_bashrc/.git rev-list --left-right \
                             --count origin/master..."${BASHRC_CURR_BRANCH}")
