@@ -1,4 +1,4 @@
-# sys bashrc
+# Stablecaps bashrc
 
 ## Premise
 Slimmed down sysadmin .bashrc that should hopefully have minimal system dependencies.
