@@ -1,7 +1,7 @@
 # Stablecaps bashrc
 
 ## Premise
-Slimmed down sysadmin .bashrc that should hopefully have minimal system dependencies.
+Slimmed down sysadmin .bashrc that should hopefully have minimal system dependencies. Created over a decade from stuff I found on the net, wrote myself and borrowed from the excellent [bash-it](https://github.com/Bash-it/bash-it), and [ohmyzsh](https://ohmyz.sh/).
 
 ## Extended Documentation >> https://stablecaps.github.io/stablecaps_bashrc/
 
