@@ -16,17 +16,17 @@ alias gcl='git clone'
 alias ga='git add'
 
 gam() {
-  git ls-files -m | tr '\n' '\0' | xargs -0 -L1 -I '$' git add '$'
+  git ls-files -m "$(git rev-parse --show-toplevel)" | tr '\n' '\0' | xargs -0 -L1 -I '$' git add '$'
 }
 
 alias grm='git rm'
 
 gau() {
-  git ls-files --others --exclude-standard | tr '\n' '\0' | xargs -0 -L1 -I '$' git add '$'
+  git ls-files --others --exclude-standard  "$(git rev-parse --show-toplevel)" | tr '\n' '\0' | xargs -0 -L1 -I '$' git add '$'
 }
 
 grma() {
-  git ls-files -m | tr '\n' '\0' | xargs -0 -L1 -I '$' git rm '$'
+  git ls-files -m "$(git rev-parse --show-toplevel)" | tr '\n' '\0' | xargs -0 -L1 -I '$' git rm '$'
 }
 
 alias gap='git add -p'
@@ -109,7 +109,7 @@ alias gstl="git stash list"
 alias gstp="git stash pop"
 alias ght='cd "$(git rev-parse --show-toplevel)"'
 # Show untracked files
-alias gu='git ls-files . --exclude-standard --others'
+alias gu='git ls-files . --exclude-standard --others "$(git rev-parse --show-toplevel)"'
 
 case $OSTYPE in
   darwin*)

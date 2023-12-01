@@ -27,9 +27,9 @@
 SET_FULL_PROMPT="full"
 
 # Theme vars below are unused when SET_FULL_PROMPT is commented
-SET_THEME_VAR="49"
-SET_BARCOL="\[\033[38;5;226m\]"
-SET_TXTCOL="\[\033[0;1;34m\]"
+SET_THEME_VAR="196"
+SET_BARCOL="\[\033[1;1;31m\]"
+SET_TXTCOL="\[\033[0;95m\]"
 SET_PATHCOL_VAR="1"
 SET_PATHCOL="\[\033[0;37m\]"
 

@@ -1,6 +1,6 @@
 # .bashrc
 
-### Uncomment for error chaceking .bashrc
+### Uncomment for error checking .bashrc
 # set -eE -o functrace
 
 # file1=f1
@@ -45,6 +45,11 @@ cite _about _param _example _group _author _version
 . "${HOME}/stablecaps_bashrc/internal/internal_colour_defs.sh"
 . "${HOME}/stablecaps_bashrc/internal/internal_git_functions.sh"
 
+### Comment/uncomment to activate LS_COLORS - Additional defs can be added using vivid
+. "${HOME}/stablecaps_bashrc/internal/internal_ls_colors_defs.sh"
+LS_COLORS=$ayu_modified
+export LS_COLORS
+
 # source aliases
 . "${HOME}/stablecaps_bashrc/aliases/_core-bash_aliases.sh"
 . "${HOME}/stablecaps_bashrc/aliases/docker_aliases.sh"
@@ -55,12 +60,9 @@ if command -v apt &> /dev/null; then
 fi
 #
 . "${HOME}/stablecaps_bashrc/aliases/terraform_aliases.sh"
-if command -v kubectl &> /dev/null; then
-    . "${HOME}/stablecaps_bashrc/aliases/apt_aliases.sh"
-fi
 
 
-
+### TODO: fix bug with slow completions
 # source completions
 # if ! shopt -oq posix; then
 #   if [ -f /usr/share/bash-completion/bash_completion ]; then
@@ -69,7 +71,6 @@ fi
 #     . /etc/bash_completion
 #   fi
 # fi
-
 
 # . "${HOME}/stablecaps_bashrc/completions/docker_completion.sh"
 # . "${HOME}/stablecaps_bashrc/completions/docker-compose_completion.sh"
@@ -88,6 +89,7 @@ fi
 . "${HOME}/stablecaps_bashrc/modules/installer_module.sh"
 # . "${HOME}/stablecaps_bashrc/modules/ssh_helper_module.sh"
 #. "${HOME}/stablecaps_bashrc/modules/ssh-agent_module.sh"
+
 
 #################################################################
 # make less more friendly for non-text input files, see lesspipe
@@ -320,3 +322,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+. "$HOME/.cargo/env"
