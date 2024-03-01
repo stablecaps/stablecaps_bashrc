@@ -1,0 +1,341 @@
+# .bashrc
+
+# Set default editor
+export VISUAL=vim
+EDITOR=vim
+export EDITOR
+
+#################################################################
+### LS COLORS
+ayu_modified="pi=0;38;2;0;0;0;48;2;27;125;196:mh=0:so=0;38;2;0;0;0;48;2;240;113;113:ex=1;38;2;237;102;106:su=0:mi=0;38;2;0;0;0;48;2;237;102;106:or=0;38;2;0;0;0;48;2;237;102;106:do=0;38;2;0;0;0;48;2;240;113;113:tw=0:rs=0:ca=0:bd=0;38;2;0;0;0;48;2;237;102;106:di=0;38;2;27;125;196:st=0:cd=0;38;2;0;0;0;48;2;134;179;0:ln=0;38;2;240;113;113:fi=0:sg=0:*~=0;38;2;170;170;170:ow=0:no=0:*.t=0;38;2;49;136;102:*.z=1;38;2;134;179;0:*.o=0;38;2;170;170;170:*.p=0;38;2;49;136;102:*.c=0;38;2;49;136;102:*.h=0;38;2;49;136;102:*.m=0;38;2;49;136;102:*.d=0;38;2;49;136;102:*.a=1;38;2;237;102;106:*.r=0;38;2;49;136;102:*.nb=0;38;2;49;136;102:*.la=0;38;2;170;170;170:*.as=0;38;2;49;136;102:*.so=1;38;2;237;102;106:*.py=0;38;2;49;136;102:*.gv=0;38;2;49;136;102:*.td=0;38;2;49;136;102:*.ex=0;38;2;49;136;102:*.rs=0;38;2;49;136;102:*.gz=1;38;2;134;179;0:*.pl=0;38;2;49;136;102:*.ts=0;38;2;49;136;102:*.bz=1;38;2;134;179;0:*.ui=0;38;2;237;147;102:*.ml=0;38;2;49;136;102:*.cc=0;38;2;49;136;102:*.go=0;38;2;49;136;102:*.sh=0;38;2;49;136;102:*.xz=1;38;2;134;179;0:*.ps=0;38;2;237;102;106:*.ko=1;38;2;237;102;106:*.ll=0;38;2;49;136;102:*.rm=0;38;2;240;113;113:*.cr=0;38;2;49;136;102:*.di=0;38;2;49;136;102:*.cs=0;38;2;49;136;102:*.pm=0;38;2;49;136;102:*.hi=0;38;2;170;170;170:*.lo=0;38;2;170;170;170:*.fs=0;38;2;49;136;102:*.js=0;38;2;49;136;102:*.jl=0;38;2;49;136;102:*css=0;38;2;49;136;102:*.hs=0;38;2;49;136;102:*.kt=0;38;2;49;136;102:*.mn=0;38;2;49;136;102:*.hh=0;38;2;49;136;102:*.el=0;38;2;49;136;102:*.cp=0;38;2;49;136;102:*.wv=0;38;2;240;113;113:*.bc=0;38;2;170;170;170:*.md=0;38;2;237;147;102:*.pp=0;38;2;49;136;102:*.rb=0;38;2;49;136;102:*.7z=1;38;2;134;179;0:*.vb=0;38;2;49;136;102:*.tml=0;38;2;237;147;102:*.def=0;38;2;49;136;102:*.pyc=0;38;2;170;170;170:*.idx=0;38;2;170;170;170:*.xml=0;38;2;237;147;102:*.out=0;38;2;170;170;170:*.pid=0;38;2;170;170;170:*.txt=0;38;2;237;147;102:*.asa=0;38;2;49;136;102:*.wmv=0;38;2;240;113;113:*.bak=0;38;2;170;170;170:*.cgi=0;38;2;49;136;102:*.apk=1;38;2;134;179;0:*.tsx=0;38;2;49;136;102:*.hxx=0;38;2;49;136;102:*.tbz=1;38;2;134;179;0:*.mp3=0;38;2;240;113;113:*.xls=0;38;2;237;102;106:*.sty=0;38;2;170;170;170:*.rar=1;38;2;134;179;0:*.inl=0;38;2;49;136;102:*.rtf=0;38;2;237;102;106:*.ilg=0;38;2;170;170;170:*.swp=0;38;2;170;170;170:*.wav=0;38;2;240;113;113:*.csv=0;38;2;237;147;102:*.ppt=0;38;2;237;102;106:*.bst=0;38;2;237;147;102:*.zip=1;38;2;134;179;0:*.swf=0;38;2;240;113;113:*.ltx=0;38;2;49;136;102:*.tmp=0;38;2;170;170;170:*.gif=0;38;2;240;113;113:*.xmp=0;38;2;237;147;102:*.pps=0;38;2;237;102;106:*.xcf=0;38;2;240;113;113:*TODO=1:*.kex=0;38;2;237;102;106:*.ppm=0;38;2;240;113;113:*.cfg=0;38;2;237;147;102:*.ics=0;38;2;237;102;106:*.mid=0;38;2;240;113;113:*.com=1;38;2;237;102;106:*.erl=0;38;2;49;136;102:*.odt=0;38;2;237;102;106:*.tif=0;38;2;240;113;113:*.nix=0;38;2;237;147;102:*.jpg=0;38;2;240;113;113:*.git=0;38;2;170;170;170:*.tar=1;38;2;134;179;0:*.sql=0;38;2;49;136;102:*.bat=1;38;2;237;102;106:*.htm=0;38;2;237;147;102:*.ods=0;38;2;237;102;106:*.xlr=0;38;2;237;102;106:*.bbl=0;38;2;170;170;170:*.dpr=0;38;2;49;136;102:*.fls=0;38;2;170;170;170:*.bcf=0;38;2;170;170;170:*.arj=1;38;2;134;179;0:*.dot=0;38;2;49;136;102:*.mpg=0;38;2;240;113;113:*.rst=0;38;2;237;147;102:*.sxw=0;38;2;237;102;106:*.m4v=0;38;2;240;113;113:*hgrc=0;38;2;154;232;69:*.ini=0;38;2;237;147;102:*.awk=0;38;2;49;136;102:*.vob=0;38;2;240;113;113:*.pro=0;38;2;154;232;69:*.dmg=1;38;2;134;179;0:*.epp=0;38;2;49;136;102:*.blg=0;38;2;170;170;170:*.doc=0;38;2;237;102;106:*.fsx=0;38;2;49;136;102:*.otf=0;38;2;240;113;113:*.png=0;38;2;240;113;113:*.pdf=0;38;2;237;102;106:*.pod=0;38;2;49;136;102:*.jar=1;38;2;134;179;0:*.h++=0;38;2;49;136;102:*.pas=0;38;2;49;136;102:*.bib=0;38;2;237;147;102:*.ipp=0;38;2;49;136;102:*.lua=0;38;2;49;136;102:*.fnt=0;38;2;240;113;113:*.mp4=0;38;2;240;113;113:*.mli=0;38;2;49;136;102:*.mir=0;38;2;49;136;102:*.hpp=0;38;2;49;136;102:*.ttf=0;38;2;240;113;113:*.sxi=0;38;2;237;102;106:*.php=0;38;2;49;136;102:*.mkv=0;38;2;240;113;113:*.cpp=0;38;2;49;136;102:*.tex=0;38;2;49;136;102:*.bmp=0;38;2;240;113;113:*.svg=0;38;2;240;113;113:*.psd=0;38;2;240;113;113:*.pkg=1;38;2;134;179;0:*.exs=0;38;2;49;136;102:*.vim=0;38;2;49;136;102:*.mov=0;38;2;240;113;113:*.fsi=0;38;2;49;136;102:*.cxx=0;38;2;49;136;102:*.flv=0;38;2;240;113;113:*.pyo=0;38;2;170;170;170:*.avi=0;38;2;240;113;113:*.odp=0;38;2;237;102;106:*.ind=0;38;2;170;170;170:*.pyd=0;38;2;170;170;170:*.aif=0;38;2;240;113;113:*.zsh=0;38;2;49;136;102:*.vcd=1;38;2;134;179;0:*.clj=0;38;2;49;136;102:*.bsh=0;38;2;49;136;102:*.htc=0;38;2;49;136;102:*.yml=0;38;2;237;147;102:*.tcl=0;38;2;49;136;102:*.ps1=0;38;2;49;136;102:*.toc=0;38;2;170;170;170:*.wma=0;38;2;240;113;113:*.img=1;38;2;134;179;0:*.sbt=0;38;2;49;136;102:*.zst=1;38;2;134;179;0:*.rpm=1;38;2;134;179;0:*.tgz=1;38;2;134;179;0:*.pbm=0;38;2;240;113;113:*.log=0;38;2;170;170;170:*.kts=0;38;2;49;136;102:*.aux=0;38;2;170;170;170:*.csx=0;38;2;49;136;102:*.bag=1;38;2;134;179;0:*.pgm=0;38;2;240;113;113:*.dox=0;38;2;154;232;69:*.ico=0;38;2;240;113;113:*.m4a=0;38;2;240;113;113:*.deb=1;38;2;134;179;0:*.eps=0;38;2;240;113;113:*.fon=0;38;2;240;113;113:*.inc=0;38;2;49;136;102:*.bz2=1;38;2;134;179;0:*.exe=1;38;2;237;102;106:*.elm=0;38;2;49;136;102:*.ogg=0;38;2;240;113;113:*.dll=1;38;2;237;102;106:*.bin=1;38;2;134;179;0:*.gvy=0;38;2;49;136;102:*.iso=1;38;2;134;179;0:*.c++=0;38;2;49;136;102:*.psd1=0;38;2;49;136;102:*.html=0;38;2;237;147;102:*.dart=0;38;2;49;136;102:*.pptx=0;38;2;237;102;106:*.opus=0;38;2;240;113;113:*.java=0;38;2;49;136;102:*.yaml=0;38;2;237;147;102:*.orig=0;38;2;170;170;170:*.psm1=0;38;2;49;136;102:*.docx=0;38;2;237;102;106:*.conf=0;38;2;237;147;102:*.rlib=0;38;2;170;170;170:*.jpeg=0;38;2;240;113;113:*.flac=0;38;2;240;113;113:*.purs=0;38;2;49;136;102:*.fish=0;38;2;49;136;102:*.mpeg=0;38;2;240;113;113:*.hgrc=0;38;2;154;232;69:*.diff=0;38;2;49;136;102:*.less=0;38;2;49;136;102:*.bash=0;38;2;49;136;102:*.webm=0;38;2;240;113;113:*.epub=0;38;2;237;102;106:*.toml=0;38;2;237;147;102:*.make=0;38;2;154;232;69:*.tiff=0;38;2;240;113;113:*.xlsx=0;38;2;237;102;106:*.h264=0;38;2;240;113;113:*.tbz2=1;38;2;134;179;0:*.lisp=0;38;2;49;136;102:*.json=0;38;2;237;147;102:*.lock=0;38;2;170;170;170:*README=0;38;2;0;0;0;48;2;237;147;102:*.ipynb=0;38;2;49;136;102:*.cmake=0;38;2;154;232;69:*.dyn_o=0;38;2;170;170;170:*.patch=0;38;2;49;136;102:*.class=0;38;2;170;170;170:*.toast=1;38;2;134;179;0:*.shtml=0;38;2;237;147;102:*.cache=0;38;2;170;170;170:*.swift=0;38;2;49;136;102:*.mdown=0;38;2;237;147;102:*.cabal=0;38;2;49;136;102:*shadow=0;38;2;237;147;102:*passwd=0;38;2;237;147;102:*.scala=0;38;2;49;136;102:*.xhtml=0;38;2;237;147;102:*.groovy=0;38;2;49;136;102:*.dyn_hi=0;38;2;170;170;170:*INSTALL=0;38;2;0;0;0;48;2;237;147;102:*COPYING=0;38;2;102;102;102:*.flake8=0;38;2;154;232;69:*TODO.md=1:*.ignore=0;38;2;154;232;69:*.gradle=0;38;2;49;136;102:*LICENSE=0;38;2;102;102;102:*.matlab=0;38;2;49;136;102:*.config=0;38;2;237;147;102:*.desktop=0;38;2;237;147;102:*TODO.txt=1:*setup.py=0;38;2;154;232;69:*Doxyfile=0;38;2;154;232;69:*.gemspec=0;38;2;154;232;69:*Makefile=0;38;2;154;232;69:*.kdevelop=0;38;2;154;232;69:*COPYRIGHT=0;38;2;102;102;102:*.fdignore=0;38;2;154;232;69:*README.md=0;38;2;0;0;0;48;2;237;147;102:*.markdown=0;38;2;237;147;102:*.DS_Store=0;38;2;170;170;170:*.cmake.in=0;38;2;154;232;69:*configure=0;38;2;154;232;69:*.rgignore=0;38;2;154;232;69:*.localized=0;38;2;170;170;170:*INSTALL.md=0;38;2;0;0;0;48;2;237;147;102:*README.txt=0;38;2;0;0;0;48;2;237;147;102:*.gitignore=0;38;2;154;232;69:*.scons_opt=0;38;2;170;170;170:*SConscript=0;38;2;154;232;69:*Dockerfile=0;38;2;237;147;102:*CODEOWNERS=0;38;2;154;232;69:*.gitconfig=0;38;2;154;232;69:*SConstruct=0;38;2;154;232;69:*Makefile.in=0;38;2;170;170;170:*.synctex.gz=0;38;2;170;170;170:*MANIFEST.in=0;38;2;154;232;69:*.travis.yml=0;38;2;49;136;102:*INSTALL.txt=0;38;2;0;0;0;48;2;237;147;102:*.gitmodules=0;38;2;154;232;69:*LICENSE-MIT=0;38;2;102;102;102:*Makefile.am=0;38;2;154;232;69:*.fdb_latexmk=0;38;2;170;170;170:*CONTRIBUTORS=0;38;2;0;0;0;48;2;237;147;102:*appveyor.yml=0;38;2;49;136;102:*configure.ac=0;38;2;154;232;69:*.applescript=0;38;2;49;136;102:*.clang-format=0;38;2;154;232;69:*.gitattributes=0;38;2;154;232;69:*LICENSE-APACHE=0;38;2;102;102;102:*CMakeLists.txt=0;38;2;154;232;69:*CMakeCache.txt=0;38;2;170;170;170:*CONTRIBUTORS.md=0;38;2;0;0;0;48;2;237;147;102:*requirements.txt=0;38;2;154;232;69:*CONTRIBUTORS.txt=0;38;2;0;0;0;48;2;237;147;102:*.sconsign.dblite=0;38;2;170;170;170:*package-lock.json=0;38;2;170;170;170:*.CFUserTextEncoding=0;38;2;170;170;170"
+
+LS_COLORS=$ayu_modified
+export LS_COLORS
+
+#################################################################
+### enable dircolor  support
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+fi
+
+#################################################################
+### Less
+# make less more friendly for non-text input files, see lesspipe
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# Color for manpages in less makes manpages a little easier to read
+export LESS_TERMCAP_mb=$'\E[38;5;221m'
+export LESS_TERMCAP_md=$'\E[38;5;221m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;35m'
+
+
+#####################################################
+################ Set SHELL Options ##################
+#####################################################
+
+# enter a few characters and press UpArrow/DownArrow
+# to search backwards/forwards through the history
+if [[ ${SHELLOPTS} =~ (vi|emacs) ]]
+then
+    # https://codeinthehole.com/tips/the-most-important-command-line-tip-incremental-history-searching-with-inputrc/
+    bind '"\e[A":history-search-backward'
+    bind '"\e[B":history-search-forward'
+    bind '"\e[C":forward-char'
+    bind '"\e[D":backward-char'
+fi
+##########################################
+# history guide: https://www.digitalocean.com/community/tutorials/how-to-use-bash-history-commands-and-expansions-on-a-linux-vps
+
+HISTCONTROL=ignoreboth                   # don't put duplicate lines or lines starting with space in the history.
+export HISTSIZE=100000                   # big big history
+export HISTFILESIZE=100000               # big big history
+shopt -s histappend
+# shopt -s cmdhist # save all lines of a multiple-line command in the same history entry <- really bad idea
+shopt -s cdspell # corrects minor cd spelling errors
+# shopt -s cdable_vars # non-dir args supplied to cd are assumned to be vars
+shopt -s no_empty_cmd_completion # tell bash/completion to NOT try completion for an empty entry
+
+
+# https://superuser.com/questions/288714/bash-autocomplete-like-zsh
+bind 'set show-all-if-ambiguous on'
+bind 'set colored-completion-prefix on'
+
+
+#####################################################
+################ PS Command Prompt ##################
+#####################################################
+function prompt_command() {
+    # basic ubuntu color prompt
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+}
+
+PROMPT_COMMAND="prompt_command"
+
+#####################################################
+#################### Aliases ########################
+#####################################################
+
+# 1. core
+alias mkdir='mkdir -p'
+
+function mkcd() {
+    mkdir -p $1; cd $1
+}
+
+alias qs='/bin/ls' # fast ls with no options (many files in a directory)
+alias la='ls -Alh' # show hidden files
+alias lao='ls -ld .?*' # show ONLY hidden files
+alias lx='ls -lXBh' # sort by extension
+alias lk='ls -lSrh' # sort by size
+alias lc='ls -lcrh' # sort by change time
+alias lu='ls -lurh' # sort by access time
+alias lr='ls -lRh' # recursive ls
+alias lt='ls -ltrh' # sort by date
+alias lm='ls -alh | less' # pipe through 'less'
+alias lw='ls -xAh' # wide listing format
+alias ll='ls -lth' # long listing format
+alias labc='ls -lap' #alphabetical sort
+alias lf="ls -l | egrep -v '^d'" # files only
+alias ldir="ls -l | egrep '^d'" # directories only
+
+# cd commands
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias bashrc='cd ${HOME}/stablecaps_bashrc; ll' # Switch to stablecaps_bashrc directory in home and ls
+
+function up() {
+	local d=""
+	limit=$1
+	for ((i=1 ; i <= limit ; i++))
+		do
+			d=$d/..
+		done
+	d=$(echo $d | sed 's/^\///')
+	if [ -z "$d" ]; then
+		d=..
+	fi
+	cd $d
+}
+
+# other commands
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# Git aliases
+
+#########################
+alias gdiffh='git diff HEAD'
+alias gpllo='git pull origin'
+alias gpllocb='git pull origin $(git rev-parse --abbrev-ref HEAD)' # git pull origin current branch
+alias gp='git push'
+alias gpo='git push origin'
+alias gpocb='git push origin $(git rev-parse --abbrev-ref HEAD)' # git push origin current branch
+#########################
+
+# https://stackoverflow.com/questions/37770467/why-do-i-have-to-git-push-set-upstream-origin-branch
+# Aliases
+alias gcl='git clone'
+alias ga='git add'
+
+gam() {
+  git ls-files -m "$(git rev-parse --show-toplevel)" | tr '\n' '\0' | xargs -0 -L1 -I '$' git add '$'
+}
+
+alias grm='git rm'
+
+gau() {
+  git ls-files --others --exclude-standard  "$(git rev-parse --show-toplevel)" | tr '\n' '\0' | xargs -0 -L1 -I '$' git add '$'
+}
+
+grma() {
+  git ls-files -m "$(git rev-parse --show-toplevel)" | tr '\n' '\0' | xargs -0 -L1 -I '$' git rm '$'
+}
+
+alias gap='git add -p'
+alias gall='git add -A'
+alias gf='git fetch --all --prune'
+alias gft='git fetch --all --prune --tags'
+alias gfv='git fetch --all --prune --verbose'
+alias gftv='git fetch --all --prune --tags --verbose'
+alias gus='git reset HEAD'
+alias gpristine='git reset --hard && git clean -dfx'
+alias gclean='git clean -fd'
+alias gm="git merge"
+alias gmv='git mv'
+alias g='git'
+alias get='git'
+alias gs='git status'
+alias gss='git status -s'
+alias gsu='git submodule update --init --recursive'
+alias gl='git pull'
+alias glum='git pull upstream master'
+alias gpr='git pull --rebase'
+alias gpp='git pull && git push'
+alias gup='git fetch && git rebase'
+alias gp='git push'
+alias gpo='git push origin'
+alias gpu='git push --set-upstream'
+alias gpuo='git push --set-upstream origin'
+alias gpuoc='git push --set-upstream origin $(git symbolic-ref --short HEAD)'
+alias gpom='git push origin master'
+alias gr='git remote'
+alias grv='git remote -v'
+alias gra='git remote add'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias gdv='git diff -w "$@" | vim -R -'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gcm='git commit -v -m'
+alias gcam="git commit -v -am"
+alias gci='git commit --interactive'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gbt='git branch --track'
+alias gbm='git branch -m'
+alias gbd='git branch -d'
+alias gbD='git branch -D'
+alias gcount='git shortlog -sn'
+alias gcp='git cherry-pick'
+alias gcpx='git cherry-pick -x'
+alias gco='git checkout'
+alias gcom='git checkout master'
+alias gcb='git checkout -b'
+alias gcob='git checkout -b'
+alias gct='git checkout --track'
+alias gcpd='git checkout master; git pull; git branch -D'
+alias gexport='git archive --format zip --output'
+alias gdel='git branch -D'
+alias gmu='git fetch origin -v; git fetch upstream -v; git merge upstream/master'
+alias gll='git log --graph --pretty=oneline --abbrev-commit'
+alias gg="git log --graph --pretty=format:'%C(bold)%h%Creset%C(magenta)%d%Creset %s %C(yellow)<%an> %C(cyan)(%cr)%Creset' --abbrev-commit --date=relative"
+alias ggs="gg --stat"
+alias gsl="git shortlog -sn"
+alias gwc="git whatchanged"
+alias gt="git tag"
+alias gta="git tag -a"
+alias gtd="git tag -d"
+alias gtl="git tag -l"
+alias gpatch="git format-patch -1"
+# From http://blogs.atlassian.com/2014/10/advanced-git-aliases/
+# Show commits since last pull
+alias gnew="git log HEAD@{1}..HEAD@{0}"
+# Add uncommitted and unstaged changes to the last commit
+alias gcaa="git commit -a --amend -C HEAD"
+alias ggui="git gui"
+alias gcsam="git commit -S -am"
+alias gst="git stash"
+alias gstb="git stash branch"
+alias gstd="git stash drop"
+alias gstl="git stash list"
+alias gstp="git stash pop"
+alias ght='cd "$(git rev-parse --show-toplevel)"'
+# Show untracked files
+alias gu='git ls-files . --exclude-standard --others "$(git rev-parse --show-toplevel)"'
+
+#####################################################
+################## Functions ########################
+#####################################################
+
+function grepo() {
+    # finds all files in current directory recursively and searches each for grep pattern
+    # (case insensitive)
+    find ./ -not -path "*/\.*" -not -path "*venv/*" -not -path "*node_modules/*" -name "*" -exec grep --color=auto -Isi "$1" {}  \;
+}
+
+function grepoall() {
+    # finds all files in current directory recursively and searches each for grep pattern
+    # Shows the file name in which the pattern was found (case insensitive + linenumber)
+    # FILE_SEARCH eaxmple "*.py" with quotes or "*" if not supplied
+
+    TXT_PATTERN="$1"
+    if [[ $# -eq 2 ]]; then
+        FILE_SEARCH="$2"
+    else
+        FILE_SEARCH="*"
+    fi
+
+    find ./ -not -path "*/\.*" -not -path "*venv/*" -not -path "*node_modules/*" -iname "${FILE_SEARCH}" -exec grep --color=auto -Isin "$TXT_PATTERN" {} /dev/null \;
+}
+
+function venv_create() {
+    if [[ $# -ge 1 ]]; then
+        # takes argument like python3.6
+        desired_py_version=$1
+        pyth_ver=$(which $desired_py_version)
+        if [[ -z "${pyth_ver}" ]]; then
+            echo "python version $desired_py_version not found"
+        else
+            $pyth_ver -m venv venv
+            source venv/bin/activate
+        fi
+    else
+        echo "supply an arg"
+    fi
+}
+
+function venv_activate() {
+
+    source venv/bin/activate
+}
+
+alias hist='history' # shows all history
+alias gh='history | grep ' # grep all history
+
+
+function hist_nlines() {
+
+    if [ $# -eq 0 ]; then num_lines=100; else num_lines=$1; fi
+
+    history | tail -n $num_lines;
+}
+
+function grep_history() {
+
+    history | grep "$1" ;
+}
+
+function _chop_first_column() { awk '{for (i=2; i<NF; i++) printf $i " "; print $NF}' ; }
+
+function _add_line_numbers() { awk '{print NR " " $0}' ; }
+
+function _top_ten() { sort | uniq -c | sort -r | head -n 10 ; }
+
+function _unique_history() { _chop_first_column | _top_ten | _chop_first_column | _add_line_numbers ; }
+
+function ghf() {
+
+    if [ $# -eq 0 ]; then hist_nlines | _unique_history; fi
+    if [ $# -eq 1 ]; then grep_history "$1" | _unique_history; fi
+    if [ $# -eq 2 ]; then
+        $(grep_history "$1" | _unique_history | grep ^$2 | _chop_first_column)
+    fi
+}
+
+################################################
+# https://stackoverflow.com/questions/14750650/how-to-delete-history-of-last-10-commands-in-shell
+function histdel() {
+
+    for h in $(seq $1 $2 | tac); do
+        history -d $h
+    done
+    history -d $(history 1 | awk '{print $1}')
+}
+
+
+function histdeln() {
+
+    # Get the current history number
+    n=$(history 1 | awk '{print $1}')
+
+    # Call histdel with the appropriate range
+    histdel $(( $n - $1 )) $(( $n - 1 ))
+}
