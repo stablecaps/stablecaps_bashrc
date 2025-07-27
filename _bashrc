@@ -139,8 +139,10 @@ shopt -s no_empty_cmd_completion # tell bash/completion to NOT try completion fo
 
 
 # https://superuser.com/questions/288714/bash-autocomplete-like-zsh
-bind 'set show-all-if-ambiguous on'
-bind 'set colored-completion-prefix on'
+if [[ $- == *i* ]]; then
+    bind 'set show-all-if-ambiguous on'
+    bind 'set colored-completion-prefix on'
+fi
 
 #####################################################
 ################ PS Command Prompt ##################
